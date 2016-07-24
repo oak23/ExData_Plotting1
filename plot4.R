@@ -1,8 +1,8 @@
 library(dplyr)
 library(lubridate)
 
-#Sys.setlocale("LC_TIME", "English")
-#setwd('C:/Users/oak/Downloads/BasePlotting/ExData_Plotting1/')
+Sys.setlocale("LC_TIME", "English")
+setwd('C:/Users/oak/Downloads/BasePlotting/ExData_Plotting1/')
 
 fileurl = file.path(getwd(),'household_power_consumption.txt')
 
@@ -20,7 +20,6 @@ with(dat, plot(datetime, Global_active_power, ylab='Global Active power',type='l
 with(dat, plot(datetime, Voltage, ylab='Voltage',type='l', xlab='datetime'))
 
 with(dat, plot(datetime, Sub_metering_1, col='black', ylab='Energy sub metering',type='l',xlab=''))
-axis(1, at=1:3, labels=c('Thu','Fri','Sat'))
 with(dat, lines(datetime, Sub_metering_2,col='red'))
 with(dat, lines(datetime, Sub_metering_3,col='blue'))
 legend('topright',

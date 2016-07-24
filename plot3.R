@@ -14,7 +14,6 @@ dat =
 png('plot3.png',width=480,height=480)
 
 with(dat, plot(datetime, Sub_metering_1, col='black', ylab='Energy sub metering',type='l',xlab=''))
-axis(1, at=1:3, labels=c('Thu','Fri','Sat'))
 with(dat, lines(datetime, Sub_metering_2,col='red'))
 with(dat, lines(datetime, Sub_metering_3,col='blue'))
 legend('topright',
