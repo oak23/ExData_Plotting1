@@ -13,14 +13,14 @@ dat =
 
 png('plot3.png',width=480,height=480)
 
-plot(datetime, dat$Sub_metering_1, col='black', ylab='Energy sub metering',type='l',xlab='')
+with(dat, plot(datetime, Sub_metering_1, col='black', ylab='Energy sub metering',type='l',xlab=''))
 axis(1, at=1:3, labels=c('Thu','Fri','Sat'))
-lines(datetime, dat$Sub_metering_2,col='red')
-lines(datetime, dat$Sub_metering_3,col='blue')
+with(dat, lines(datetime, Sub_metering_2,col='red'))
+with(dat, lines(datetime, Sub_metering_3,col='blue'))
 legend('topright',
        legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),
        col=c('black','red','blue'),
        lty=1
-       )
+)
 
 dev.off()
